@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Matchstick Game</title>
+	<link rel="stylesheet" type="text/css" href="game.css">
+	<script src="scripts/vue.min.js"></script>
+	<script src="scripts/sweetalert.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="board">
+
+			<div v-if="board==1">
+				<board-1></board-1>
+			</div>
+
+			<div v-else-if="board==2">
+				<board-2></board-2>
+			</div>
+			
+			<div class="board-select">
+				<input type="radio" id="board-1" name="board" v-model="board" value="1"> <label for="board-1"> Board 1</label>
+				<input type="radio" id="board-2" name="board" v-model="board" value="2"> <label for="board-2"> Board 2</label>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="game.js"></script>
+</body>
+</html>

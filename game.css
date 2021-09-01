@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff0e4;
+}
+
+.board {
+    position: relative;
+    width: 500px;
+    height: 610px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background: #fae4ca;
+    box-shadow: 10px 10px 50px #d5c7b6,
+    -10px -10px 50px #fffff6
+}
+
+.stick {
+    display: flex;
+    width: 160px;
+    height: 14px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.stick-slot {
+    width: 160px;
+    height: 14px;
+    background-color: #acadad;
+    background-image: linear-gradient(#bdbdbd, #dfdfdf, #bdbdbd);
+    border-radius: 7px;
+}
+
+.stick-img {
+    width: 160px; 
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter:         drop-shadow(5px 5px 5px #222); 
+}
+
+.move-count {
+    position: absolute;
+    top: 10px;
+    right: 56px;
+}
+
+.retry-btn {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #222;
+}
+
+.retry-btn:hover {
+    color: #4d4d4d;
+}
+
+.board-select {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+}
