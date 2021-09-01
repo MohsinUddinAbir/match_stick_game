@@ -6,25 +6,32 @@ body {
 
 .board {
     position: relative;
-    width: 500px;
-    height: 610px;
-    margin: 20px auto;
+    width: 960px;
+    height: 720px;
+    margin: 40px auto;
     border-radius: 10px;
     background: #fae4ca;
     box-shadow: 10px 10px 50px #d5c7b6,
-    -10px -10px 50px #fffff6
+        -10px -10px 50px #fffff6
+}
+
+.box {
+    position: relative;
+    width: 660px;
+    height: 660px;
+    margin: auto auto;
 }
 
 .stick {
     display: flex;
-    width: 160px;
+    width: 120px;
     height: 14px;
     position: absolute;
     cursor: pointer;
 }
 
 .stick-slot {
-    width: 160px;
+    width: 120px;
     height: 14px;
     background-color: #acadad;
     background-image: linear-gradient(#bdbdbd, #dfdfdf, #bdbdbd);
@@ -32,21 +39,22 @@ body {
 }
 
 .stick-img {
-    width: 160px; 
+    width: 120px;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
-    filter:         drop-shadow(5px 5px 5px #222); 
+    filter: drop-shadow(5px 5px 5px #222);
+    z-index: 10;
 }
 
 .move-count {
     position: absolute;
-    top: 10px;
-    right: 56px;
+    top: 30px;
+    right: 76px;
 }
 
 .retry-btn {
     position: absolute;
-    top: 8px;
-    right: 16px;
+    top: 28px;
+    right: 36px;
     background-color: transparent;
     border: none;
     outline: none;
@@ -61,6 +69,40 @@ body {
 
 .board-select {
     position: absolute;
-    top: 10px;
-    left: 16px;
+    top: 30px;
+    left: 36px;
+}
+
+.guide_text {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.bounce-enter-active {
+    animation: bounce-in .5s;
+}
+
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Matchstick Game</title>
 	<link rel="stylesheet" type="text/css" href="game.css">
-	<script src="scripts/vue.min.js"></script>
+	<script src="scripts/vue.js"></script>
 	<script src="scripts/sweetalert.min.js"></script>
 </head>
 <body>
@@ -20,8 +20,8 @@
 			</div>
 			
 			<div class="board-select">
-				<input type="radio" id="board-1" name="board" v-model="board" value="1"> <label for="board-1"> Board 1</label>
-				<input type="radio" id="board-2" name="board" v-model="board" value="2"> <label for="board-2"> Board 2</label>
+				<input type="radio" id="board-1" name="board" v-model="board" value="1"> <label for="board-1"> Kuiz 1</label>
+				<input type="radio" id="board-2" name="board" v-model="board" value="2" :disabled="!complete"> <label for="board-2"> Kuiz 2</label>
 			</div>
 		</div>
 	</div>
