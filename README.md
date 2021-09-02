@@ -1,1 +1,1 @@
-# match_stick_game
+# matchstick_game
