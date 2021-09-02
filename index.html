@@ -9,20 +9,25 @@
 </head>
 <body>
 	<div id="app">
-		<div class="board">
 
-			<div v-if="board==1">
+			<div class="board" v-if="board==1">
 				<board-1></board-1>
+				
+				<div class="board-select">
+					<input type="radio" id="board-1" name="board" v-model="board" value="1"> <label for="board-1"> Kuiz 1</label>
+					<input type="radio" id="board-2" name="board" v-model="board" value="2" :disabled="!complete"> <label for="board-2"> Kuiz 2</label>
+				</div>
 			</div>
-
-			<div v-else-if="board==2">
+	
+			<div class="board2" v-else-if="board==2">
 				<board-2></board-2>
+
+				<div class="board-select">
+					<input type="radio" id="board-1" name="board" v-model="board" value="1"> <label for="board-1"> Kuiz 1</label>
+					<input type="radio" id="board-2" name="board" v-model="board" value="2" :disabled="!complete"> <label for="board-2"> Kuiz 2</label>
+				</div>
 			</div>
 			
-			<div class="board-select">
-				<input type="radio" id="board-1" name="board" v-model="board" value="1"> <label for="board-1"> Kuiz 1</label>
-				<input type="radio" id="board-2" name="board" v-model="board" value="2" :disabled="!complete"> <label for="board-2"> Kuiz 2</label>
-			</div>
 		</div>
 	</div>
 

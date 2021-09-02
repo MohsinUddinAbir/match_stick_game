@@ -53,21 +53,21 @@ Vue.component('board-2', {
         <div>
             <hand-stick ref="hand" :stick="is_hand" :top="60" :left="40" :rotate="0"></hand-stick>
             <div class="move-count">Gerakkan: {{move}}</div> <button @click="reset" class="retry-btn"><img width="20" height="20" src="images/retry.svg"></button>
-            <div class="box">
-                <match-stick ref="stick_0" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="165" :left="375" :rotate="45"></match-stick>
-                <match-stick ref="stick_1" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="215" :left="325" :rotate="-45"></match-stick>
+            <div class="box2">
+                <match-stick ref="stick_0" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="125" :left="425" :rotate="45"></match-stick>
+                <match-stick ref="stick_1" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="175" :left="365" :rotate="-45"></match-stick>
                 
-                <match-stick ref="stick_2" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="340" :left="20" :rotate="90"></match-stick>
-                <match-stick ref="stick_3" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="340" :left="155" :rotate="90"></match-stick>
-                <match-stick ref="stick_4" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="340" :left="285" :rotate="90"></match-stick>
-                <match-stick ref="stick_5" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="340" :left="420" :rotate="90"></match-stick>
+                <match-stick ref="stick_2" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="300" :left="70" :rotate="90"></match-stick>
+                <match-stick ref="stick_3" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="300" :left="195" :rotate="90"></match-stick>
+                <match-stick ref="stick_4" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="300" :left="325" :rotate="90"></match-stick>
+                <match-stick ref="stick_5" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="300" :left="460" :rotate="90"></match-stick>
 
-                <match-stick ref="stick_6" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="270" :left="90" :rotate="0"></match-stick>
-                <match-stick ref="stick_7" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="270" :left="220" :rotate="0"></match-stick>
-                <match-stick ref="stick_8" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="270" :left="350" :rotate="0"></match-stick>
-                <match-stick ref="stick_9" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="410" :left="90" :rotate="0"></match-stick>
-                <match-stick ref="stick_10" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="410" :left="220" :rotate="0"></match-stick>
-                <match-stick ref="stick_11" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="410" :left="350" :rotate="0"></match-stick>
+                <match-stick ref="stick_6" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="230" :left="130" :rotate="0"></match-stick>
+                <match-stick ref="stick_7" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="230" :left="260" :rotate="0"></match-stick>
+                <match-stick ref="stick_8" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="230" :left="390" :rotate="0"></match-stick>
+                <match-stick ref="stick_9" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="370" :left="130" :rotate="0"></match-stick>
+                <match-stick ref="stick_10" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="370" :left="260" :rotate="0"></match-stick>
+                <match-stick ref="stick_11" @picked="picked" :is_hand="is_hand" :can_move="can_move" :top="370" :left="390" :rotate="0"></match-stick>
             </div>
             <div class="guide_text">Gerakkan <b>1 batang</b> mancis <br/> untuk menukar arah</div>
         </div>
@@ -78,8 +78,8 @@ Vue.component('board-2', {
             move: 0,
             max_move: 1,
             can_move: true,
-            correct_condition: [true, true, false, true, true, false, false, true, false, false, false, false],
-            primary_condition: [true, true, false, false, true, false, false, true, false, false, true, false],
+            correct_condition: [true, true, false, false, true, false, false, true, false, false, true, false],
+            primary_condition: [true, true, false, true, true, false, false, true, false, false, false, false],
         }
     },
     mounted() {
