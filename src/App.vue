@@ -1,28 +1,52 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div id="app">
+		<div class="board" v-if="board==1">
+			<first-board @set-level="setLevel"></first-board>
+
+			<div class="board-select">
+				<input type="radio" id="board-1" name="board" v-model="board" value="1"> <label for="board-1"> Kuiz
+					1</label>
+				<input type="radio" id="board-2" name="board" v-model="board" value="2" :disabled="!complete"> <label
+					for="board-2"> Kuiz 2</label>
+			</div>
+		</div>
+
+		<div class="board2" v-else-if="board==2">
+			<second-board @set-level="setLevel"></second-board>
+
+			<div class="board-select">
+				<input type="radio" id="board-1" name="board" v-model="board" value="1"> <label for="board-1"> Kuiz
+					1</label>
+				<input type="radio" id="board-2" name="board" v-model="board" value="2" :disabled="!complete"> <label
+					for="board-2"> Kuiz 2</label>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FirstBoard from './components/FirstBoard.vue'
+import SecondBoard from './components/SecondBoard.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: 'App',
+	components: {
+		FirstBoard,
+		SecondBoard
+	},
+    data() {
+		return {
+			board: 1,
+			complete: 0
+		}
+    },
+	methods: {
+		setLevel(data) {
+			this.board = data.board
+			this.complete = data.complete
+		}
+	}
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style src="./assets/game.css"></style>
